@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* Temel Seçenekler */
+    "target": "ES2020",                          // JavaScript hedef versiyonu
+    "module": "commonjs",                        // Modül sistemi
+    "lib": ["ES2020"],                          // Kullanılacak kütüphaneler
+    "outDir": "./dist",                         // Derlenen dosyaların çıkış dizini
+    "rootDir": "./src",                         // Kaynak dosyaların kök dizini
+    
+    /* Modül Çözümleme Seçenekleri */
+    "moduleResolution": "node",                 // Modül çözümleme stratejisi
+    "baseUrl": "./",                            // Temel dizin
+    "paths": {
+      "@/*": ["src/*"]                          // Path alias
+    },
+    "esModuleInterop": true,                    // CommonJS ve ES6 modülleri arası uyumluluk
+    "resolveJsonModule": true,                  // JSON dosyalarını içe aktarma
+    
+    /* Tip Kontrolü Seçenekleri */
+    "strict": true,                             // Tüm katı tip kontrollerini etkinleştir
+    "noImplicitAny": true,                      // 'any' tipini engellemek
+    "strictNullChecks": true,                   // Null ve undefined kontrolü
+    "strictFunctionTypes": true,                // Fonksiyon tipi kontrolü
+    "strictPropertyInitialization": true,       // Class property başlatma kontrolü
+    "noUnusedLocals": true,                     // Kullanılmayan yerel değişkenleri kontrol et
+    "noUnusedParameters": true,                 // Kullanılmayan parametreleri kontrol et
+    "noImplicitReturns": true,                  // Fonksiyonların her zaman değer döndürmesini zorunlu kıl
+    "noFallthroughCasesInSwitch": true,        // Switch case'lerde break kontrolü
+    
+    /* Diğer Seçenekler */
+    "skipLibCheck": true,                       // .d.ts dosyalarını kontrol etme
+    "forceConsistentCasingInFileNames": true,  // Dosya adı büyük/küçük harf tutarlılığı
+    "sourceMap": true,                          // Source map dosyası oluştur
+    "declaration": true,                        // .d.ts dosyası oluştur
+    "removeComments": true,                     // Yorumları kaldır
+    "types": ["node"]                           // Tip tanımlamaları
+  },
+  "include": [
+    "src/**/*"                                  // Derlenecek dosyalar
+  ],
+  "exclude": [
+    "node_modules",                             // Hariç tutulacak dosyalar
+    "dist",
+    "**/*.spec.ts"
+  ]
+}
